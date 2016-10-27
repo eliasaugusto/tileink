@@ -8,9 +8,8 @@ import features from './features';
 import settings from './settings';
 
 const server = new Server();
-const components = _.flatten(features);
-const routes = _.without(_.map(components, component => component.routes), undefined);
-const tasks = _.without(_.map(components, component => component.tasks), undefined);
+const routes = _.without(_.map(features, feature => feature.routes), undefined);
+const tasks = _.without(_.map(features, feature => feature.tasks), undefined);
 
 //
 // Database Connection
@@ -33,13 +32,13 @@ server.connection({
 // Binds
 
 server.bind({
-  queue: createQueue(tasks)
+  queue: createQueue(_.flatten(tasks))
 });
 
 //
 // Routes
 
-_.forEach(routes, route => server.route(route));
+_.forEach(_.flatten(routes), route => server.route(route));
 
 //
 // Startup
