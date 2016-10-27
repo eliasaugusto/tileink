@@ -10,7 +10,9 @@
     "build": "babel src -d build"
   },
   "dependencies": {
+    "boom": "^4.2.0",
     "hapi": "^15.2.0",
+    "joi": "^9.2.0",
     "lodash": "^4.16.4",
     "mkdirp": "^0.5.1",
     "mongoose": "^4.6.5",
