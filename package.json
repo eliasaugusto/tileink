@@ -10,7 +10,11 @@
     "build": "babel src -d build"
   },
   "dependencies": {
-    "lodash": "^4.16.4"
+    "hapi": "^15.2.0",
+    "lodash": "^4.16.4",
+    "mongoose": "^4.6.5",
+    "tilelive": "^5.12.2",
+    "tilelive-mapnik": "^0.6.18"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
