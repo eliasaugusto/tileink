@@ -8,8 +8,9 @@ import features from './features';
 import settings from './settings';
 
 const server = new Server();
-const routes = _.flatten(_.map(features, feature => feature.routes));
-const tasks = _.flatten(_.map(features, feature => feature.tasks));
+const components = _.flatten(features);
+const routes = _.without(_.map(components, component => component.routes), undefined);
+const tasks = _.without(_.map(components, component => component.tasks), undefined);
 
 //
 // Database Connection
