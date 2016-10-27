@@ -12,6 +12,7 @@
   "dependencies": {
     "hapi": "^15.2.0",
     "lodash": "^4.16.4",
+    "mkdirp": "^0.5.1",
     "mongoose": "^4.6.5",
     "tilelive": "^5.12.2",
     "tilelive-mapnik": "^0.6.18"
