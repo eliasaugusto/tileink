@@ -4,5 +4,14 @@
   "version": "0.0.0",
   "description": "A service that provides a simple platform for building custom maps.",
   "author": "André Moraes <andrelom@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node build",
+    "build": "babel src -d build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-root-import": "^1.1.1",
+    "babel-preset-es2015": "^6.18.0"
+  }
 }
